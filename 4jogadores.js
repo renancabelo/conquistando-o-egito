@@ -1,3 +1,3 @@
 function quatroJogadores(){
-    alert("O jogo vai começar com 4 jogadores")
+    alert("Você escolheu jogar com 4 jogadores, mas eu ainda não escrevi essa parte do código. Tente jogar com 2 jogadores.")
 }
