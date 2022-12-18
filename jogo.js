@@ -40,7 +40,7 @@ function comecarJogo() {
     else if(nomeJogador1 != "" &&
             nomeJogador2 != "" &&
             nomeJogador3 != "" &&
-            nomeJogador4 !== ""){
+            nomeJogador4 != ""){
                 quatroJogadores();
     }
 

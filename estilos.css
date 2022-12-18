@@ -71,3 +71,17 @@ tr{
     width: 800px;
     float: right;
 }
+
+#titulo_rodada_j1{
+    display: block;
+    width: 800px;
+    text-align: center;
+    float: left;
+}
+
+#titulo_rodada_j2{
+    display: block;
+    width: 800px;
+    text-align: center;
+    float: right;
+}

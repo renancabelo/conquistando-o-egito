@@ -102,9 +102,17 @@
         </table>
     </div>
 
+    <div id="titulo_rodada_j1">
+        <h2 id="rodada_j1"></h2>
+    </div>
+
+    <div id="titulo_rodada_j2">
+        <h2 id="rodada_j2">teste</h2>
+    </div>
+
     <div id="botoes_jogador_1">
-        <input type="button" id="botao_coletar_jogador_1" value="Coletar">
-        <input type="button" id="botao_construir_monumento_jogador_1" value="Construir Monumento">
+        <input type="button" id="botao_coletar_jogador_1" value="Coletar" onclick="coletarJ1()">
+        <input type="button" id="botao_construir_monumento_jogador_1" value="Construir Monumento" onclick="construirMonumentoJ1()">
         <input type="button" id="botao_construir_cidade_jogador_1" value="Construir Cidade">
         <input type="button" id="botao_treinar_soldado_jogador_1" value="Treinar Soldado">
         <input type="button" id="botao_ordenar_sacerdote_jogador_1" value="Ordenar Sacerdote">
@@ -112,7 +120,7 @@
         <input type="button" id="botao_gerar_trabalhador_jogador_1" value="Gerar Trabalhador">
         <input type="button" id="botao_mover_exercito_jogador_1" value="Mover Exército">
 
-        <input type="button" id="botao_piramide_grande_jogador_1" value="Pirâmide Grande">
+        <input type="button" id="botao_piramide_grande_jogador_1" value="Pirâmide Grande" onclick="construirPiramideGrandeJ1()">
         <input type="button" id="botao_piramide_media_jogador_1" value="Pirâmide Média">
         <input type="button" id="botao_piramide_pequena_jogador_1" value="Pirâmide Pequena">
         <input type="button" id="botao_obelisco_jogador_1" value="Obeslisco">
@@ -127,6 +135,8 @@
         <input type="button" id="botao_fazenda_pequena_jogador_1" value="Fazenda Pequena">
         <input type="button" id="botao_pedreira_grande_jogador_1" value="Pedreira Grande">
         <input type="button" id="botao_pedreira_pequena_jogador_1" value="Pedreira Pequena">
+
+        <input type="button" id="botao_encerrar_acoes_proprias_jogador_1" value="Encerrar Ações Próprias">
 
     </div>
     <div id="botoes_jogador_2">
