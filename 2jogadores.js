@@ -310,7 +310,19 @@ else{
 }
 
 function construirPiramideMediaJ1() {
+if (acoesDoAdversario == true) {
     if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("piramide construída");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ2();
+        vezJogador1();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
         alert("piramide construída");
         acoesPropriasRodada++;
         if (acoesPropriasRodada < 3) {
@@ -318,20 +330,41 @@ function construirPiramideMediaJ1() {
             mostrarBotoesMenuPrincipalJ1();
         }
         else{
-            acoesPropriasRodada = 0;
-            alert("agora é a vez do jogador 2")
-            ocultarBotoesConstruirMonumentoJ1();
-            vezJogador2();
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 2")
+                ocultarBotoesConstruirMonumentoJ1();
+                vezJogador2();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                ocultarBotoesConstruirMonumentoJ1();
+                mostrarBotoesAcaoAdversarioJ1();
+                acoesDoAdversario = true;
+            }
+
         }
     }
     else{
         alert("sem resursos para isso");
     }
-
+}
 }
 
 function construirPiramidePequenaJ1() {
+if (acoesDoAdversario == true) {
     if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("piramide construída");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ2();
+        vezJogador1();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
         alert("piramide construída");
         acoesPropriasRodada++;
         if (acoesPropriasRodada < 3) {
@@ -339,16 +372,25 @@ function construirPiramidePequenaJ1() {
             mostrarBotoesMenuPrincipalJ1();
         }
         else{
-            acoesPropriasRodada = 0;
-            alert("agora é a vez do jogador 2")
-            ocultarBotoesConstruirMonumentoJ1();
-            vezJogador2();
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 2")
+                ocultarBotoesConstruirMonumentoJ1();
+                vezJogador2();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                ocultarBotoesConstruirMonumentoJ1();
+                mostrarBotoesAcaoAdversarioJ1();
+                acoesDoAdversario = true;
+            }
+
         }
     }
     else{
         alert("sem resursos para isso");
     }
-
+}
 }
 
 function construirPiramideGrandeJ2() {
@@ -395,9 +437,19 @@ else{
 }
 }
 
-
-
 function construirPiramideMediaJ2() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("piramide construída - acao propia");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ1();
+        vezJogador2();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
     if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
         alert("piramide construída");
         acoesPropriasRodada++;
@@ -406,19 +458,42 @@ function construirPiramideMediaJ2() {
             mostrarBotoesMenuPrincipalJ2();
         }
         else{
-            acoesPropriasRodada = 0;
-            alert("agora é a vez do jogador 1")
-            ocultarBotoesConstruirMonumentoJ2();
-            vezJogador1();
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 1")
+                ocultarBotoesConstruirMonumentoJ2();
+                vezJogador1();
+                rodada1 = false;
+            }
+            else{
+                acoesPropriasRodada = 0;
+                ocultarBotoesConstruirMonumentoJ2();
+                mostrarBotoesAcaoAdversarioJ2();
+                acoesDoAdversario = true;
+            }
+
         }
     }
     else{
         alert("sem resursos para isso");
     }
 
+}
 }
 
 function construirPiramidePequenaJ2() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("piramide construída - acao propia");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ1();
+        vezJogador2();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
     if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
         alert("piramide construída");
         acoesPropriasRodada++;
@@ -427,115 +502,234 @@ function construirPiramidePequenaJ2() {
             mostrarBotoesMenuPrincipalJ2();
         }
         else{
-            acoesPropriasRodada = 0;
-            alert("agora é a vez do jogador 1")
-            ocultarBotoesConstruirMonumentoJ2();
-            vezJogador1();
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 1")
+                ocultarBotoesConstruirMonumentoJ2();
+                vezJogador1();
+                rodada1 = false;
+            }
+            else{
+                acoesPropriasRodada = 0;
+                ocultarBotoesConstruirMonumentoJ2();
+                mostrarBotoesAcaoAdversarioJ2();
+                acoesDoAdversario = true;
+            }
+
         }
     }
     else{
         alert("sem resursos para isso");
     }
 
+}
 }
 
 function construirObeliscoJ1() {
+if (acoesDoAdversario == true) {
     if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
-        alert("obelisco construído");
+        alert("obelisco construída");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ2();
+        vezJogador1();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("obelisco construída");
         acoesPropriasRodada++;
         if (acoesPropriasRodada < 3) {
             ocultarBotoesConstruirMonumentoJ1();
             mostrarBotoesMenuPrincipalJ1();
         }
         else{
-            acoesPropriasRodada = 0;
-            alert("agora é a vez do jogador 2")
-            ocultarBotoesConstruirMonumentoJ1();
-            vezJogador2();
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 2")
+                ocultarBotoesConstruirMonumentoJ1();
+                vezJogador2();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                ocultarBotoesConstruirMonumentoJ1();
+                mostrarBotoesAcaoAdversarioJ1();
+                acoesDoAdversario = true;
+            }
+
         }
     }
     else{
         alert("sem resursos para isso");
     }
-
+}
 }
 
 function construirEstatuaJ1() {
+if (acoesDoAdversario == true) {
     if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
-        alert("Estatua construído");
+        alert("estatua construída");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ2();
+        vezJogador1();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("estatua construída");
         acoesPropriasRodada++;
         if (acoesPropriasRodada < 3) {
             ocultarBotoesConstruirMonumentoJ1();
             mostrarBotoesMenuPrincipalJ1();
         }
         else{
-            acoesPropriasRodada = 0;
-            alert("agora é a vez do jogador 2")
-            ocultarBotoesConstruirMonumentoJ1();
-            vezJogador2();
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 2")
+                ocultarBotoesConstruirMonumentoJ1();
+                vezJogador2();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                ocultarBotoesConstruirMonumentoJ1();
+                mostrarBotoesAcaoAdversarioJ1();
+                acoesDoAdversario = true;
+            }
+
         }
     }
     else{
         alert("sem resursos para isso");
     }
-
+}
 }
 
 function construirEsfingeJ1() {
+if (acoesDoAdversario == true) {
     if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
-        alert("Esfinge construído");
+        alert("esfinge construída");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ2();
+        vezJogador1();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("esfinge construída");
         acoesPropriasRodada++;
         if (acoesPropriasRodada < 3) {
             ocultarBotoesConstruirMonumentoJ1();
             mostrarBotoesMenuPrincipalJ1();
         }
         else{
-            acoesPropriasRodada = 0;
-            alert("agora é a vez do jogador 2")
-            ocultarBotoesConstruirMonumentoJ1();
-            vezJogador2();
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 2")
+                ocultarBotoesConstruirMonumentoJ1();
+                vezJogador2();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                ocultarBotoesConstruirMonumentoJ1();
+                mostrarBotoesAcaoAdversarioJ1();
+                acoesDoAdversario = true;
+            }
+
         }
     }
     else{
         alert("sem resursos para isso");
     }
-
+}
 }
 
 function construirObeliscoJ2() {
+if (acoesDoAdversario == true) {
     if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
-        alert("obelisco construído");
+        alert("obelisco construída - acao propia");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ1();
+        vezJogador2();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("obelisco construída");
         acoesPropriasRodada++;
         if (acoesPropriasRodada < 3) {
             ocultarBotoesConstruirMonumentoJ2();
             mostrarBotoesMenuPrincipalJ2();
         }
         else{
-            acoesPropriasRodada = 0;
-            alert("agora é a vez do jogador 1")
-            ocultarBotoesConstruirMonumentoJ2();
-            vezJogador1();
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 1")
+                ocultarBotoesConstruirMonumentoJ2();
+                vezJogador1();
+                rodada1 = false;
+            }
+            else{
+                acoesPropriasRodada = 0;
+                ocultarBotoesConstruirMonumentoJ2();
+                mostrarBotoesAcaoAdversarioJ2();
+                acoesDoAdversario = true;
+            }
+
         }
     }
     else{
         alert("sem resursos para isso");
     }
 
+}
 }
 
 function construirEstatuaJ2() {
+if (acoesDoAdversario == true) {
     if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
-        alert("Estatua construído");
+        alert("estatua construída - acao propia");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ1();
+        vezJogador2();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("estatua construída");
         acoesPropriasRodada++;
         if (acoesPropriasRodada < 3) {
             ocultarBotoesConstruirMonumentoJ2();
             mostrarBotoesMenuPrincipalJ2();
         }
         else{
-            acoesPropriasRodada = 0;
-            alert("agora é a vez do jogador 1")
-            ocultarBotoesConstruirMonumentoJ2();
-            vezJogador1();
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 1")
+                ocultarBotoesConstruirMonumentoJ2();
+                vezJogador1();
+                rodada1 = false;
+            }
+            else{
+                acoesPropriasRodada = 0;
+                ocultarBotoesConstruirMonumentoJ2();
+                mostrarBotoesAcaoAdversarioJ2();
+                acoesDoAdversario = true;
+            }
+
         }
     }
     else{
@@ -543,26 +737,50 @@ function construirEstatuaJ2() {
     }
 
 }
+}
 
 function construirEsfingeJ2() {
+if (acoesDoAdversario == true) {
     if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
-        alert("Esfinge construído");
+        alert("esfinge construída - acao propia");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ1();
+        vezJogador2();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("esfinge construída");
         acoesPropriasRodada++;
         if (acoesPropriasRodada < 3) {
             ocultarBotoesConstruirMonumentoJ2();
             mostrarBotoesMenuPrincipalJ2();
         }
         else{
-            acoesPropriasRodada = 0;
-            alert("agora é a vez do jogador 1")
-            ocultarBotoesConstruirMonumentoJ2();
-            vezJogador1();
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 1")
+                ocultarBotoesConstruirMonumentoJ2();
+                vezJogador1();
+                rodada1 = false;
+            }
+            else{
+                acoesPropriasRodada = 0;
+                ocultarBotoesConstruirMonumentoJ2();
+                mostrarBotoesAcaoAdversarioJ2();
+                acoesDoAdversario = true;
+            }
+
         }
     }
     else{
         alert("sem resursos para isso");
     }
 
+}
 }
 
 function vezJogador2() {
