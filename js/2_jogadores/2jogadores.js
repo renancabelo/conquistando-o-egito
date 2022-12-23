@@ -6,12 +6,15 @@ var rodadasImperioAntigo = 0;
 var rodadasImpedioMedio = 0;
 var rodadasImperioNovo = 0;
 var acoesPropriasRodada = 0;
+var idadeAtual = "Era Pré-Dinástica";
 
 function doisJogadores(){
     alert("O jogo vai começar com 2 jogadores")
     document.getElementById('game_dois_jogadores').style.display = "block"
     document.getElementById('h2_jogador_1').innerHTML = 'Jogador 1: ' + nomeJogador1;
     document.getElementById('h2_jogador_2').innerHTML = 'Jogador 2: ' + nomeJogador2;
+    document.getElementById('rodada_j1').innerHTML = idadeAtual + ': Rodada ' + rodadasPreDinastica;
+    document.getElementById('rodada_j2').innerHTML = idadeAtual + ': Rodada ' + rodadasPreDinastica;
     vezJogador1();
     // document.getElementById('fundo_jogador_2').style.opacity = 0.5;
     // iniciaJogo();
@@ -44,6 +47,41 @@ function doisJogadores(){
 //         console.log("acabou"); //depois substituir pela função de rodar o imperio antigo
 //         }   
 //     }
+
+function atualizaRodada() {
+    if (rodadasPreDinastica < 6) {
+        rodadasPreDinastica++;
+        document.getElementById('rodada_j1').innerHTML = idadeAtual + ': Rodada ' + rodadasPreDinastica;
+        document.getElementById('rodada_j2').innerHTML = idadeAtual + ': Rodada ' + rodadasPreDinastica;
+    }
+    else if (rodadasPreDinastica > 5 &&
+             rodadasImperioAntigo < 6) {
+        rodadasImperioAntigo++;
+        idadeAtual = "Imperio Antigo";
+        document.getElementById('rodada_j1').innerHTML = idadeAtual + ': Rodada ' + rodadasImperioAntigo;
+        document.getElementById('rodada_j2').innerHTML = idadeAtual + ': Rodada ' + rodadasImperioAntigo;
+    }
+    else if (rodadasPreDinastica > 5 &&
+             rodadasImperioAntigo > 5 &&
+             rodadasImpedioMedio < 8) {
+        rodadasImpedioMedio++;
+        idadeAtual = "Imperio Médio";
+        document.getElementById('rodada_j1').innerHTML = idadeAtual + ': Rodada ' + rodadasImpedioMedio;
+        document.getElementById('rodada_j2').innerHTML = idadeAtual + ': Rodada ' + rodadasImpedioMedio;
+    }
+    else if (rodadasPreDinastica > 5 &&
+             rodadasImperioAntigo > 5 &&
+             rodadasImpedioMedio > 7 &&
+             rodadasImperioNovo < 5) {
+        rodadasImperioNovo++;
+        idadeAtual = "Império Novo";
+        document.getElementById('rodada_j1').innerHTML = idadeAtual + ': Rodada ' + rodadasImperioNovo;
+        document.getElementById('rodada_j2').innerHTML = idadeAtual + ': Rodada ' + rodadasImperioNovo;
+    }else {
+        alert("Jogo acabou");
+    }
+    }
+
 
 function mostrarBotoesMenuPrincipalJ1() {
     document.getElementById('botao_construir_monumento_jogador_1').style.display = "block";
@@ -284,6 +322,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -326,6 +365,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -368,6 +408,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -430,6 +471,7 @@ else{
                 ocultarBotoesConstruirMonumentoJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -474,6 +516,7 @@ else{
                 ocultarBotoesConstruirMonumentoJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -518,6 +561,7 @@ else{
                 ocultarBotoesConstruirMonumentoJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -542,6 +586,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -584,6 +629,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -626,6 +672,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -688,6 +735,7 @@ else{
                 ocultarBotoesConstruirMonumentoJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -732,6 +780,7 @@ else{
                 ocultarBotoesConstruirMonumentoJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -776,6 +825,7 @@ else{
                 ocultarBotoesConstruirMonumentoJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -800,6 +850,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();;
     }
     else{
         alert("sem resursos para isso");
@@ -842,6 +893,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -884,6 +936,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -926,6 +979,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -968,6 +1022,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -1010,6 +1065,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -1052,6 +1108,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -1094,6 +1151,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -1136,6 +1194,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -1175,6 +1234,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -1214,6 +1274,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -1253,6 +1314,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -1292,6 +1354,7 @@ if (acoesDoAdversario == true) {
         acoesDoAdversario = false;
         esconderBotoesAcaoAdversarioJ2();
         vezJogador1();
+        atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
@@ -1354,6 +1417,7 @@ else{
                 esconderBotoesConstruirCidadeJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1397,6 +1461,7 @@ else{
                 esconderBotoesConstruirCidadeJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1440,6 +1505,7 @@ else{
                 esconderBotoesConstruirCidadeJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1483,6 +1549,7 @@ else{
                 esconderBotoesConstruirCidadeJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1526,6 +1593,7 @@ else{
                 esconderBotoesConstruirCidadeJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1569,6 +1637,7 @@ else{
                 esconderBotoesConstruirCidadeJ21();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1612,6 +1681,7 @@ else{
                 esconderBotoesConstruirCidadeJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1655,6 +1725,7 @@ else{
                 esconderBotoesConstruirCidadeJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1694,6 +1765,7 @@ else{
                 esconderBotoesMenuPrincipalJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1734,6 +1806,7 @@ else{
                 esconderBotoesMenuPrincipalJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1774,6 +1847,7 @@ else{
                 esconderBotoesMenuPrincipalJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1814,6 +1888,7 @@ else{
                 esconderBotoesMenuPrincipalJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1854,6 +1929,7 @@ else{
                 esconderBotoesMenuPrincipalJ2();
                 vezJogador1();
                 rodada1 = false;
+                atualizaRodada();
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1897,6 +1973,7 @@ function encerrarAcoesJ2() {
             esconderBotoesMenuPrincipalJ2();
             vezJogador1();
             rodada1 = false;
+            atualizaRodada();
         }
         else{
             acoesPropriasRodada = 0;
