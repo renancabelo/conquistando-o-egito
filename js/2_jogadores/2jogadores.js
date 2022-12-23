@@ -1129,6 +1129,204 @@ else{
 }
 }
 
+function treinarSoldadoJ1() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("soldado treinado");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ2();
+        vezJogador1();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("soldado treinado");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada > 2) {
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 2")
+                esconderBotoesMenuPrincipalJ1();
+                vezJogador2();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesMenuPrincipalJ1();
+                mostrarBotoesAcaoAdversarioJ1();
+                acoesDoAdversario = true;
+            }
+
+        }
+        
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+function ordenarSacerdoteJ1() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("sacerdote ordenado");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ2();
+        vezJogador1();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("ordenar sacerdote");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada > 2) {
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 2")
+                esconderBotoesMenuPrincipalJ1();
+                vezJogador2();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesMenuPrincipalJ1();
+                mostrarBotoesAcaoAdversarioJ1();
+                acoesDoAdversario = true;
+            }
+
+        }
+        
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+function formarMedicoJ1() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("medico formado");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ2();
+        vezJogador1();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("medico formado");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada > 2) {
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 2")
+                esconderBotoesMenuPrincipalJ1();
+                vezJogador2();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesMenuPrincipalJ1();
+                mostrarBotoesAcaoAdversarioJ1();
+                acoesDoAdversario = true;
+            }
+
+        }
+        
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+function gerarTrabalhadorJ1() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("trabalhador gerado");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ2();
+        vezJogador1();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("trabalhador gerado");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada > 2) {
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 2")
+                esconderBotoesMenuPrincipalJ1();
+                vezJogador2();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesMenuPrincipalJ1();
+                mostrarBotoesAcaoAdversarioJ1();
+                acoesDoAdversario = true;
+            }
+
+        }
+        
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+function moverExercitoJ1() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("exercito movido");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ2();
+        vezJogador1();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("exercito movido");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada > 2) {
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 2")
+                esconderBotoesMenuPrincipalJ1();
+                vezJogador2();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesMenuPrincipalJ1();
+                mostrarBotoesAcaoAdversarioJ1();
+                acoesDoAdversario = true;
+            }
+
+        }
+        
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+
+
+
 function construirPocoGrandeJ2() {
 if (acoesDoAdversario == true) {
     if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
@@ -1155,6 +1353,7 @@ else{
                 alert("agora é a vez do jogador 1")
                 esconderBotoesConstruirCidadeJ2();
                 vezJogador1();
+                rodada1 = false;
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1197,6 +1396,7 @@ else{
                 alert("agora é a vez do jogador 1")
                 esconderBotoesConstruirCidadeJ2();
                 vezJogador1();
+                rodada1 = false;
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1239,6 +1439,7 @@ else{
                 alert("agora é a vez do jogador 1")
                 esconderBotoesConstruirCidadeJ2();
                 vezJogador1();
+                rodada1 = false;
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1281,6 +1482,7 @@ else{
                 alert("agora é a vez do jogador 1")
                 esconderBotoesConstruirCidadeJ2();
                 vezJogador1();
+                rodada1 = false;
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1323,6 +1525,7 @@ else{
                 alert("agora é a vez do jogador 1")
                 esconderBotoesConstruirCidadeJ2();
                 vezJogador1();
+                rodada1 = false;
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1365,6 +1568,7 @@ else{
                 alert("agora é a vez do jogador 1")
                 esconderBotoesConstruirCidadeJ21();
                 vezJogador1();
+                rodada1 = false;
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1407,6 +1611,7 @@ else{
                 alert("agora é a vez do jogador 1")
                 esconderBotoesConstruirCidadeJ2();
                 vezJogador1();
+                rodada1 = false;
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1449,6 +1654,7 @@ else{
                 alert("agora é a vez do jogador 1")
                 esconderBotoesConstruirCidadeJ2();
                 vezJogador1();
+                rodada1 = false;
             }
             else{
                 acoesPropriasRodada = 0;
@@ -1463,6 +1669,245 @@ else{
         alert("sem resursos para isso");
     }
 }
+}
+
+function treinarSoldadoJ2() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("soldado treinado");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ1();
+        vezJogador2();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("soldado treinado");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada > 2) {
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 1")
+                esconderBotoesMenuPrincipalJ2();
+                vezJogador1();
+                rodada1 = false;
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesMenuPrincipalJ2();
+                mostrarBotoesAcaoAdversarioJ2();
+                acoesDoAdversario = true;
+            }
+
+        }
+        
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+function ordenarSacerdoteJ2() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("sacerdote ordenado");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ1();
+        vezJogador2();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("sacerdote ordenado");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada > 2) {
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 1")
+                esconderBotoesMenuPrincipalJ2();
+                vezJogador1();
+                rodada1 = false;
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesMenuPrincipalJ2();
+                mostrarBotoesAcaoAdversarioJ2();
+                acoesDoAdversario = true;
+            }
+
+        }
+        
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+function formarMedicoJ2() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("medico formado");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ1();
+        vezJogador2();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("medico formado");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada > 2) {
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 1")
+                esconderBotoesMenuPrincipalJ2();
+                vezJogador1();
+                rodada1 = false;
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesMenuPrincipalJ2();
+                mostrarBotoesAcaoAdversarioJ2();
+                acoesDoAdversario = true;
+            }
+
+        }
+        
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+function gerarTrabalhadorJ2() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("trabalhador gerado");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ1();
+        vezJogador2();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("trabalhador gerado");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada > 2) {
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 1")
+                esconderBotoesMenuPrincipalJ2();
+                vezJogador1();
+                rodada1 = false;
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesMenuPrincipalJ2();
+                mostrarBotoesAcaoAdversarioJ2();
+                acoesDoAdversario = true;
+            }
+
+        }
+        
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+function moverExercitoJ2() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("exercito movido");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ1();
+        vezJogador2();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("exercito movido");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada > 2) {
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 1")
+                esconderBotoesMenuPrincipalJ2();
+                vezJogador1();
+                rodada1 = false;
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesMenuPrincipalJ2();
+                mostrarBotoesAcaoAdversarioJ2();
+                acoesDoAdversario = true;
+            }
+
+        }
+        
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+function encerrarAcoesJ1() {
+    if (acoesPropriasRodada > 0) {
+        if (rodada1 == true) {
+            acoesPropriasRodada = 0;
+            esconderBotoesMenuPrincipalJ1();
+            vezJogador2();
+        }
+        else{
+            acoesPropriasRodada = 0;
+            esconderBotoesMenuPrincipalJ1();
+            mostrarBotoesAcaoAdversarioJ1();
+            acoesDoAdversario = true;
+        }
+    }
+    else{
+        alert("Não pode encerrar a jogada agora. Faça pelo menos uma ação própria.");
+    }
+}
+
+function encerrarAcoesJ2() {
+    if (acoesPropriasRodada > 0) {
+        if (rodada1 == true) {
+            acoesPropriasRodada = 0;
+            esconderBotoesMenuPrincipalJ2();
+            vezJogador1();
+            rodada1 = false;
+        }
+        else{
+            acoesPropriasRodada = 0;
+            esconderBotoesMenuPrincipalJ2();
+            mostrarBotoesAcaoAdversarioJ2();
+            acoesDoAdversario = true;
+        }
+    }
+    else{
+        alert("Não pode encerrar a jogada agora. Faça pelo menos uma ação própria.");
+    }
 }
 
 
