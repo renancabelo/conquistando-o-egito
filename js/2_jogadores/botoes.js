@@ -93,6 +93,12 @@ function mostrarBotoesConstruirCidadeJ1() {
     document.getElementById('botao_fazenda_pequena_jogador_1').style.display = "block";
     document.getElementById('botao_pedreira_grande_jogador_1').style.display = "block";
     document.getElementById('botao_pedreira_pequena_jogador_1').style.display = "block";
+    document.getElementById('botao_templo_pequeno_jogador_1').style.display = "block";
+    document.getElementById('botao_templo_grande_jogador_1').style.display = "block";
+    if (casaDeCuraDisponivel == true) {
+        document.getElementById('botao_casa_vida_jogador_1').style.display = "block";
+    }
+
 }
 
 function mostrarBotoesConstruirCidadeJ2() {
@@ -104,6 +110,12 @@ function mostrarBotoesConstruirCidadeJ2() {
     document.getElementById('botao_fazenda_pequena_jogador_2').style.display = "block";
     document.getElementById('botao_pedreira_grande_jogador_2').style.display = "block";
     document.getElementById('botao_pedreira_pequena_jogador_2').style.display = "block";
+    document.getElementById('botao_templo_pequeno_jogador_2').style.display = "block";
+    document.getElementById('botao_templo_grande_jogador_2').style.display = "block";
+    if (casaDeCuraDisponivel == true) {
+        document.getElementById('botao_casa_vida_jogador_2').style.display = "block";
+    }
+
 }
 
 function esconderBotoesConstruirCidadeJ1() {
@@ -115,6 +127,10 @@ function esconderBotoesConstruirCidadeJ1() {
     document.getElementById('botao_fazenda_pequena_jogador_1').style.display = "none";
     document.getElementById('botao_pedreira_grande_jogador_1').style.display = "none";
     document.getElementById('botao_pedreira_pequena_jogador_1').style.display = "none";
+    document.getElementById('botao_templo_pequeno_jogador_1').style.display = "none";
+    document.getElementById('botao_templo_grande_jogador_1').style.display = "none";
+    document.getElementById('botao_casa_vida_jogador_1').style.display = "none";
+
 }
 
 function esconderBotoesConstruirCidadeJ2() {
@@ -126,6 +142,9 @@ function esconderBotoesConstruirCidadeJ2() {
     document.getElementById('botao_fazenda_pequena_jogador_2').style.display = "none";
     document.getElementById('botao_pedreira_grande_jogador_2').style.display = "none";
     document.getElementById('botao_pedreira_pequena_jogador_2').style.display = "none";
+    document.getElementById('botao_templo_pequeno_jogador_2').style.display = "none";
+    document.getElementById('botao_templo_grande_jogador_2').style.display = "none";
+    document.getElementById('botao_casa_vida_jogador_2').style.display = "none";
 }
 
 function mostrarBotoesAcaoAdversarioJ1() {
@@ -1862,6 +1881,270 @@ else{
 
         }
         
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+function cliqueConstruirTemploGrandeJ2() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("templo construido");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ1();
+        vezJogador2();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("templo construido");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada < 3) {
+            esconderBotoesConstruirCidadeJ2();
+            mostrarBotoesMenuPrincipalJ2();
+        }
+        else{
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 1")
+                esconderBotoesConstruirCidadeJ2();
+                vezJogador1();
+                rodada1 = false;
+                atualizaRodada();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesConstruirCidadeJ2();
+                mostrarBotoesAcaoAdversarioJ2();
+                acoesDoAdversario = true;
+            }
+
+        }
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+function cliqueConstruirTemploPequenoJ2() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("templo construido");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ1();
+        vezJogador2();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("templo construido");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada < 3) {
+            esconderBotoesConstruirCidadeJ2();
+            mostrarBotoesMenuPrincipalJ2();
+        }
+        else{
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 1")
+                esconderBotoesConstruirCidadeJ2();
+                vezJogador1();
+                rodada1 = false;
+                atualizaRodada();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesConstruirCidadeJ2();
+                mostrarBotoesAcaoAdversarioJ2();
+                acoesDoAdversario = true;
+            }
+
+        }
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+function cliqueConstruirCasaVidaJ2() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("casa construida");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ1();
+        vezJogador2();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("casa construida");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada < 3) {
+            esconderBotoesConstruirCidadeJ2();
+            mostrarBotoesMenuPrincipalJ2();
+        }
+        else{
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 1")
+                esconderBotoesConstruirCidadeJ2();
+                vezJogador1();
+                rodada1 = false;
+                atualizaRodada();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesConstruirCidadeJ2();
+                mostrarBotoesAcaoAdversarioJ2();
+                acoesDoAdversario = true;
+            }
+
+        }
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+function cliqueConstruirTemploGrandeJ1() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("templo construido");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ2();
+        vezJogador1();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("templo construido");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada < 3) {
+            esconderBotoesConstruirCidadeJ1();
+            mostrarBotoesMenuPrincipalJ1();
+        }
+        else{
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 2")
+                esconderBotoesConstruirCidadeJ1();
+                vezJogador2();
+                rodada1 = false;
+                atualizaRodada();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesConstruirCidadeJ1();
+                mostrarBotoesAcaoAdversarioJ1();
+                acoesDoAdversario = true;
+            }
+
+        }
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+function cliqueConstruirTemploPequenoJ1() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("templo construido");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ2();
+        vezJogador1();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("templo construido");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada < 3) {
+            esconderBotoesConstruirCidadeJ1();
+            mostrarBotoesMenuPrincipalJ1();
+        }
+        else{
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 1")
+                esconderBotoesConstruirCidadeJ1();
+                vezJogador2();
+                rodada1 = false;
+                atualizaRodada();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesConstruirCidadeJ1();
+                mostrarBotoesAcaoAdversarioJ1();
+                acoesDoAdversario = true;
+            }
+
+        }
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+}
+
+function cliqueConstruirCasaVidaJ1() {
+if (acoesDoAdversario == true) {
+    if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("casa construida");
+        acoesDoAdversario = false;
+        esconderBotoesAcaoAdversarioJ2();
+        vezJogador1();
+    }
+    else{
+        alert("sem resursos para isso");
+    }
+}
+else{
+        if (acoesPropriasRodada < 40) { //substituir esse if por "se tem recursos para construir, construa"
+        alert("casa construida");
+        acoesPropriasRodada++;
+        if (acoesPropriasRodada < 3) {
+            esconderBotoesConstruirCidadeJ1();
+            mostrarBotoesMenuPrincipalJ1();
+        }
+        else{
+            if (rodada1 == true) {
+                acoesPropriasRodada = 0;
+                alert("agora é a vez do jogador 2")
+                esconderBotoesConstruirCidadeJ1();
+                vezJogador2();
+                rodada1 = false;
+                atualizaRodada();
+            }
+            else{
+                acoesPropriasRodada = 0;
+                esconderBotoesConstruirCidadeJ1();
+                mostrarBotoesAcaoAdversarioJ1();
+                acoesDoAdversario = true;
+            }
+
+        }
     }
     else{
         alert("sem resursos para isso");

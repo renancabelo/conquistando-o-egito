@@ -177,6 +177,30 @@
     display: none;
 }
 
+#botao_casa_vida_jogador_2{
+    display: none;
+}
+
+#botao_templo_grande_jogador_2{
+    display: none;
+}
+
+#botao_templo_pequeno_jogador_2{
+    display: none;
+}
+
+#botao_casa_vida_jogador_1{
+    display: none;
+}
+
+#botao_templo_grande_jogador_1{
+    display: none;
+}
+
+#botao_templo_pequeno_jogador_1{
+    display: none;
+}
+
 #botao_encerrar_acoes_proprias_jogador_1{
     display: none;
 }
