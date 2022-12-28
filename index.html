@@ -8,6 +8,7 @@
     <script src="js/jogo.js" defer></script>
     <script src="js/1_jogador/1jogador.js"></script>
     <script src="js/2_jogadores/2jogadores.js"></script>
+    <script src="js/2_jogadores/botoes.js"></script>
     <script src="js/3_jogadores/3jogadores.js"></script>
     <script src="js/4_jogadores/4jogadores.js"></script>
     <link rel="stylesheet" href="estilos.css">
@@ -37,7 +38,7 @@
     <div id="fundo_jogador_1">
         <table id = "tabela_jogador_1" cellpadding="0" cellspacing="0">
             <tr id = "tr_tabela">
-                <td id = "jog1_terreno_1">1</td>
+                <td id = "jog1_terreno_1" onclick="cliqueTerreno1J1()">1</td>
                 <td id = "jog1_terreno_2">2</td>
                 <td id = "jog1_terreno_3">3</td>
                 <td id = "jog1_terreno_4">4</td>
@@ -111,65 +112,69 @@
     </div>
 <br>
     <div id="botoes_jogador_1">
-        <input type="button" id="botao_coletar_jogador_1" value="Coletar" onclick="coletarJ1()">
-        <input type="button" id="botao_construir_monumento_jogador_1" value="Construir Monumento" onclick="construirMonumentoJ1()">
-        <input type="button" id="botao_construir_cidade_jogador_1" value="Construir Cidade" onclick="construirCidadeJ1()">
-        <input type="button" id="botao_treinar_soldado_jogador_1" value="Treinar Soldado" onclick="treinarSoldadoJ1()">
-        <input type="button" id="botao_ordenar_sacerdote_jogador_1" value="Ordenar Sacerdote" onclick="ordenarSacerdoteJ1()">
-        <input type="button" id="botao_formar_medico_jogador_1" value="Formar Médico" onclick="formarMedicoJ1()">
-        <input type="button" id="botao_gerar_trabalhador_jogador_1" value="Gerar Trabalhador" onclick="gerarTrabalhadorJ1()">
-        <input type="button" id="botao_mover_exercito_jogador_1" value="Mover Exército" onclick="moverExercitoJ1()">
+        <input type="button" id="botao_coletar_jogador_1" value="Coletar" onclick="cliqueColetarJ1()">
+        <input type="button" id="botao_construir_monumento_jogador_1" value="Construir Monumento" onclick="cliqueConstruirMonumentoJ1()">
+        <input type="button" id="botao_construir_cidade_jogador_1" value="Construir Cidade" onclick="cliqueConstruirCidadeJ1()">
+        <input type="button" id="botao_treinar_soldado_jogador_1" value="Treinar Soldado" onclick="cliqueTreinarSoldadoJ1()">
+        <input type="button" id="botao_ordenar_sacerdote_jogador_1" value="Ordenar Sacerdote" onclick="cliqueOrdenarSacerdoteJ1()">
+        <input type="button" id="botao_formar_medico_jogador_1" value="Formar Médico" onclick="cliqueFormarMedicoJ1()">
+        <input type="button" id="botao_gerar_trabalhador_jogador_1" value="Gerar Trabalhador" onclick="cliqueGerarTrabalhadorJ1()">
+        <input type="button" id="botao_mover_exercito_jogador_1" value="Mover Exército" onclick="cliqueMoverExercitoJ1()">
 
-        <input type="button" id="botao_piramide_grande_jogador_1" value="Pirâmide Grande" onclick="construirPiramideGrandeJ1()">
-        <input type="button" id="botao_piramide_media_jogador_1" value="Pirâmide Média" onclick="construirPiramideMediaJ1()">
-        <input type="button" id="botao_piramide_pequena_jogador_1" value="Pirâmide Pequena" onclick="construirPiramidePequenaJ1()">
-        <input type="button" id="botao_obelisco_jogador_1" value="Obeslisco" onclick="construirObeliscoJ1()">
-        <input type="button" id="botao_esfinge_jogador_1" value="Esfinge" onclick="construirEsfingeJ1()">
-        <input type="button" id="botao_estatua_jogador_1" value="Estátua" onclick="construirEstatuaJ1()">
+        <input type="button" id="botao_piramide_grande_jogador_1" value="Pirâmide Grande" onclick="cliqueConstruirPiramideGrandeJ1()">
+        <input type="button" id="botao_piramide_media_jogador_1" value="Pirâmide Média" onclick="cliqueConstruirPiramideMediaJ1()">
+        <input type="button" id="botao_piramide_pequena_jogador_1" value="Pirâmide Pequena" onclick="cliqueConstruirPiramidePequenaJ1()">
+        <input type="button" id="botao_obelisco_jogador_1" value="Obeslisco" onclick="cliqueConstruirObeliscoJ1()">
+        <input type="button" id="botao_esfinge_jogador_1" value="Esfinge" onclick="cliqueConstruirEsfingeJ1()">
+        <input type="button" id="botao_estatua_jogador_1" value="Estátua" onclick="cliqueConstruirEstatuaJ1()">
 
-        <input type="button" id="botao_poco_grande_jogador_1" value="Poço Grande" onclick="construirPocoGrandeJ1()">
-        <input type="button" id="botao_poco_pequeno_jogador_1" value="Poço Pequeno" onclick="construirPocoPequenoJ1()">
-        <input type="button" id="botao_extratora_grande_jogador_1" value="Extratora de Madeira Grande" onclick="construirExtratoraGrandeJ1()">
-        <input type="button" id="botao_extratora_pequena_jogador_1" value="Extratora de Madeira Pequena" onclick="construirExtratoraPequenaJ1()">
-        <input type="button" id="botao_fazenda_grande_jogador_1" value="Fazenda Grande" onclick="construirFazendaGrandeJ1()">
-        <input type="button" id="botao_fazenda_pequena_jogador_1" value="Fazenda Pequena" onclick="construirFazendaPequenaJ1()">
-        <input type="button" id="botao_pedreira_grande_jogador_1" value="Pedreira Grande" onclick="construirPedreiraGrandeJ1()">
-        <input type="button" id="botao_pedreira_pequena_jogador_1" value="Pedreira Pequena" onclick="construirPedreiraPequenaJ1()">
+        <input type="button" id="botao_poco_grande_jogador_1" value="Poço Grande" onclick="cliqueConstruirPocoGrandeJ1()">
+        <input type="button" id="botao_poco_pequeno_jogador_1" value="Poço Pequeno" onclick="cliqueConstruirPocoPequenoJ1()">
+        <input type="button" id="botao_extratora_grande_jogador_1" value="Extratora de Madeira Grande" onclick="cliqueConstruirExtratoraGrandeJ1()">
+        <input type="button" id="botao_extratora_pequena_jogador_1" value="Extratora de Madeira Pequena" onclick="cliqueConstruirExtratoraPequenaJ1()">
+        <input type="button" id="botao_fazenda_grande_jogador_1" value="Fazenda Grande" onclick="cliqueConstruirFazendaGrandeJ1()">
+        <input type="button" id="botao_fazenda_pequena_jogador_1" value="Fazenda Pequena" onclick="cliqueConstruirFazendaPequenaJ1()">
+        <input type="button" id="botao_pedreira_grande_jogador_1" value="Pedreira Grande" onclick="cliqueConstruirPedreiraGrandeJ1()">
+        <input type="button" id="botao_pedreira_pequena_jogador_1" value="Pedreira Pequena" onclick="cliqueConstruirPedreiraPequenaJ1()">
 
-        <input type="button" id="botao_encerrar_acoes_proprias_jogador_1" value="Encerrar Ações Próprias" onclick="encerrarAcoesJ1()">
+        <input type="button" id="botao_encerrar_acoes_proprias_jogador_1" value="Encerrar Ações Próprias" onclick="cliqueEncerrarAcoesJ1()">
 
     </div>
     <div id="botoes_jogador_2">
-        <input type="button" id="botao_coletar_jogador_2" value="Coletar" onclick="coletarJ2()">
-        <input type="button" id="botao_construir_monumento_jogador_2" value="Construir Monumento" onclick="construirMonumentoJ2()">
-        <input type="button" id="botao_construir_cidade_jogador_2" value="Construir Cidade" onclick="construirCidadeJ2()">
-        <input type="button" id="botao_treinar_soldado_jogador_2" value="Treinar Soldado" onclick="treinarSoldadoJ2()">
-        <input type="button" id="botao_ordenar_sacerdote_jogador_2" value="Ordenar Sacerdote" onclick="ordenarSacerdoteJ2()">
-        <input type="button" id="botao_formar_medico_jogador_2" value="Formar Médico" onclick="formarMedicoJ2()">
-        <input type="button" id="botao_gerar_trabalhador_jogador_2" value="Gerar Trabalhador" onclick="gerarTrabalhadorJ2()">
-        <input type="button" id="botao_mover_exercito_jogador_2" value="Mover Exército" onclick="moverExercitoJ2()">
+        <input type="button" id="botao_coletar_jogador_2" value="Coletar" onclick="cliqueColetarJ2()">
+        <input type="button" id="botao_construir_monumento_jogador_2" value="Construir Monumento" onclick="cliqueConstruirMonumentoJ2()">
+        <input type="button" id="botao_construir_cidade_jogador_2" value="Construir Cidade" onclick="cliqueConstruirCidadeJ2()">
+        <input type="button" id="botao_treinar_soldado_jogador_2" value="Treinar Soldado" onclick="cliqueTreinarSoldadoJ2()">
+        <input type="button" id="botao_ordenar_sacerdote_jogador_2" value="Ordenar Sacerdote" onclick="cliqueOrdenarSacerdoteJ2()">
+        <input type="button" id="botao_formar_medico_jogador_2" value="Formar Médico" onclick="cliqueFormarMedicoJ2()">
+        <input type="button" id="botao_gerar_trabalhador_jogador_2" value="Gerar Trabalhador" onclick="cliqueGerarTrabalhadorJ2()">
+        <input type="button" id="botao_mover_exercito_jogador_2" value="Mover Exército" onclick="cliqueMoverExercitoJ2()">
 
-        <input type="button" id="botao_piramide_grande_jogador_2" value="Pirâmide Grande" onclick="construirPiramideGrandeJ2()">
-        <input type="button" id="botao_piramide_media_jogador_2" value="Pirâmide Média" onclick="construirPiramideMediaJ2()">
-        <input type="button" id="botao_piramide_pequena_jogador_2" value="Pirâmide Pequena" onclick="construirPiramidePequenaJ2()">
-        <input type="button" id="botao_obelisco_jogador_2" value="Obeslisco" onclick="construirObeliscoJ2()">
-        <input type="button" id="botao_esfinge_jogador_2" value="Esfinge" onclick="construirEsfingeJ2()">
-        <input type="button" id="botao_estatua_jogador_2" value="Estátua" onclick="construirEstatuaJ2()">
+        <input type="button" id="botao_piramide_grande_jogador_2" value="Pirâmide Grande" onclick="cliqueConstruirPiramideGrandeJ2()">
+        <input type="button" id="botao_piramide_media_jogador_2" value="Pirâmide Média" onclick="cliqueConstruirPiramideMediaJ2()">
+        <input type="button" id="botao_piramide_pequena_jogador_2" value="Pirâmide Pequena" onclick="cliqueConstruirPiramidePequenaJ2()">
+        <input type="button" id="botao_obelisco_jogador_2" value="Obeslisco" onclick="cliqueConstruirObeliscoJ2()">
+        <input type="button" id="botao_esfinge_jogador_2" value="Esfinge" onclick="cliqueConstruirEsfingeJ2()">
+        <input type="button" id="botao_estatua_jogador_2" value="Estátua" onclick="cliqueConstruirEstatuaJ2()">
 
-        <input type="button" id="botao_poco_grande_jogador_2" value="Poço Grande" onclick="construirPocoGrandeJ2()">
-        <input type="button" id="botao_poco_pequeno_jogador_2" value="Poço Pequeno" onclick="construirPocoPequenoJ2()">
-        <input type="button" id="botao_extratora_grande_jogador_2" value="Extratora de Madeira Grande" onclick="construirExtratoraGrandeJ2()">
-        <input type="button" id="botao_extratora_pequena_jogador_2" value="Extratora de Madeira Pequena" onclick="construirExtratoraPequenaJ2()">
-        <input type="button" id="botao_fazenda_grande_jogador_2" value="Fazenda Grande" onclick="construirFazendaGrandeJ2()">
-        <input type="button" id="botao_fazenda_pequena_jogador_2" value="Fazenda Pequena" onclick="construirFazendaPequenaJ2()">
-        <input type="button" id="botao_pedreira_grande_jogador_2" value="Pedreira Grande" onclick="construirPedreiraGrandeJ2()">
-        <input type="button" id="botao_pedreira_pequena_jogador_2" value="Pedreira Pequena" onclick="construirPedreiraPequenaJ2()">
+        <input type="button" id="botao_poco_grande_jogador_2" value="Poço Grande" onclick="cliqueConstruirPocoGrandeJ2()">
+        <input type="button" id="botao_poco_pequeno_jogador_2" value="Poço Pequeno" onclick="cliqueConstruirPocoPequenoJ2()">
+        <input type="button" id="botao_extratora_grande_jogador_2" value="Extratora de Madeira Grande" onclick="cliqueConstruirExtratoraGrandeJ2()">
+        <input type="button" id="botao_extratora_pequena_jogador_2" value="Extratora de Madeira Pequena" onclick="cliqueConstruirExtratoraPequenaJ2()">
+        <input type="button" id="botao_fazenda_grande_jogador_2" value="Fazenda Grande" onclick="cliqueConstruirFazendaGrandeJ2()">
+        <input type="button" id="botao_fazenda_pequena_jogador_2" value="Fazenda Pequena" onclick="cliqueConstruirFazendaPequenaJ2()">
+        <input type="button" id="botao_pedreira_grande_jogador_2" value="Pedreira Grande" onclick="cliqueConstruirPedreiraGrandeJ2()">
+        <input type="button" id="botao_pedreira_pequena_jogador_2" value="Pedreira Pequena" onclick="cliqueConstruirPedreiraPequenaJ2()">
 
-        <input type="button" id="botao_encerrar_acoes_proprias_jogador_2" value="Encerrar Ações Próprias" onclick="encerrarAcoesJ2()">
+        <input type="button" id="botao_encerrar_acoes_proprias_jogador_2" value="Encerrar Ações Próprias" onclick="cliqueEncerrarAcoesJ2()">
 
     </div>
 
 </div> <!--  game_dois_jogadores -->
+
+<div id="agradecimento">
+    <p class="obrigado-por-jogar">Obrigado por jogar!</p>
+</div>
     
 </body>
 </html>

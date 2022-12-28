@@ -85,3 +85,11 @@ tr{
     text-align: center;
     float: right;
 }
+
+.obrigado-por-jogar{
+    text-align: center;
+}
+
+#agradecimento{
+    display: none;
+}
