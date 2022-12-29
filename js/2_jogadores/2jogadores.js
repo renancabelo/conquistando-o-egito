@@ -16,37 +16,7 @@ function doisJogadores(){
     document.getElementById('rodada_j1').innerHTML = idadeAtual + ': Rodada ' + rodadasPreDinastica;
     document.getElementById('rodada_j2').innerHTML = idadeAtual + ': Rodada ' + rodadasPreDinastica;
     vezJogador1();
-    // document.getElementById('fundo_jogador_2').style.opacity = 0.5;
-    // iniciaJogo();
 }
-
-// function iniciaJogo() {
-//     if (rodada1 == true) {  
-//         primeiraRodada();
-//     }
-//     else if(rodada1 == false){
-//         console.log("rodada2 em andamento...")
-//         eraPreDinastica();
-//     }
-// }
-
-// function primeiraRodada(){
-//     console.log("rodada 1 em andamento...");
-//     rodada1 = false;
-//     iniciaJogo();
-// }
-
-// function eraPreDinastica() {
-//     if (rodadasPreDinastica < 6) {
-//         document.getElementById('rodada_j1').innerHTML = 'Era Pré-Dinástica: Rodada ' + rodadasPreDinastica;
-//         console.log("rodada feita");
-//         rodadasPreDinastica++;
-//         console.log(rodadasPreDinastica);
-//         }
-//     else{
-//         console.log("acabou"); //depois substituir pela função de rodar o imperio antigo
-//         }   
-//     }
 
 function atualizaRodada() {
     if (rodadasPreDinastica < 6) {

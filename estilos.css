@@ -93,3 +93,13 @@ tr{
 #agradecimento{
     display: none;
 }
+
+#selecione_terreno_J1{
+    display: none;
+    float: left;
+}
+
+#selecione_terreno_J2{
+    display: none;
+    float: right;
+}
