@@ -1,5 +1,5 @@
 var rodada1 = true;
-var casaDeCuraDisponivel = false;
+var casaDaVidaDisponivel = false;
 var acoesDoAdversario = false;
 var rodadasPreDinastica = 1;
 var rodadasImperioAntigo = 0;

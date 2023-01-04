@@ -1,4 +1,5 @@
 var jogador1 = new jogador(15, 15, 15, 15, 15, 15, 0)
+var terreno1J1 = new terreno(true, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 2, 0, 0, 2)
 
 var cliqueTerrenoJ1Ativo = true;
 var terreno1J1 = true;
@@ -8,12 +9,41 @@ var custoPiramideGrande = new construao(3, 5, 1)
 
 var andamentoPiramideGrandeJ1 = true;
 var andamentoPiramideMediaJ1 = false;
-var andamentoPiramidePequenaJ1 = false;
+var andamentoPiramidePequenaJ1 = false;k
 
 function construao(moedas, pedras, madeiras){
     this.moedas = moedas;
     this.pedras = pedras;
     this.madeiras = madeiras;
+}
+
+function terreno(ativo, piramideGrande, piramideMedia, piramidePequena, obelisco, esfinge, estatua, pocoGrande, pocoPequeno, extratoraGrande, extratoraPequena, fazendaGrande, fazendaPequena, pedreiraGrande, pedreiraPequena, temploGrande, temploPequeno, centroTreinamentoGrande, centroTreinamentoPequeno, casaDaVida, trabalhador, medico, sacerdote, soldado, habitantes, construcoes) {
+    this.ativo = ativo;
+    this.piramideGrande = piramideGrande;
+    this. piramideMedia = piramideMedia;
+    this.piramidePequena = piramidePequena;
+    this.obelisco = obelisco;
+    this.esfinge = esfinge;
+    this.estatua = estatua;
+    this.pocoGrande = pocoGrande;
+    this.pocoPequeno = pocoPequeno;
+    this.extratoraGrande = extratoraGrande;
+    this.extratoraPequena = extratoraPequena;
+    this.pedreiraGrande = pedreiraGrande;
+    this.pedreiraPequena = pedreiraPequena;
+    this.fazendaGrande = fazendaGrande;
+    this.fazendaPequena = fazendaPequena;
+    this.temploGrande = temploGrande;
+    this.temploPequeno = temploPequeno;
+    this.centroTreinamentoGrande = centroTreinamentoGrande;
+    this.centroTreinamentoPequeno = centroTreinamentoPequeno;
+    this.casaDaVida = casaDaVida;
+    this.trabalhador = trabalhador;
+    this. soldado = soldado;
+    this.medico = medico;
+    this.sacerdote = sacerdote;
+    this.habitantes = trabalhador + soldado + medico + sacerdote;
+    this.construcoes = piramideGrande + piramideMedia + piramidePequena + obelisco + esfinge + estatua + pocoGrande + pocoPequeno + extratoraGrande + extratoraPequena + fazendaGrande + fazendaPequena + pedreiraGrande + pedreiraPequena + temploGrande + temploPequeno + casaDaVida;
 }
 
 function jogador(moedas, pedras, madeiras, aguas, comidas, pontosFelicidade, pontosVitoria){

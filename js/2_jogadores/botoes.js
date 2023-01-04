@@ -7,7 +7,7 @@ function mostrarBotoesMenuPrincipalJ1() {
     document.getElementById('botao_ordenar_sacerdote_jogador_1').style.display = "block";
     document.getElementById('botao_gerar_trabalhador_jogador_1').style.display = "block";
     document.getElementById('botao_mover_exercito_jogador_1').style.display = "block";
-    if (casaDeCuraDisponivel == true) {
+    if (casaDaVidaDisponivel == true) {
         document.getElementById('botao_formar_medico_jogador_1').style.display = "block";
     }
     document.getElementById('botao_encerrar_acoes_proprias_jogador_1').style.display = "block";
@@ -20,7 +20,7 @@ function mostrarBotoesMenuPrincipalJ2() {
     document.getElementById('botao_ordenar_sacerdote_jogador_2').style.display = "block";
     document.getElementById('botao_gerar_trabalhador_jogador_2').style.display = "block";
     document.getElementById('botao_mover_exercito_jogador_2').style.display = "block";
-    if (casaDeCuraDisponivel == true) {
+    if (casaDaVidaDisponivel == true) {
         document.getElementById('botao_formar_medico_jogador_2').style.display = "block";
     }
     document.getElementById('botao_encerrar_acoes_proprias_jogador_2').style.display = "block";
@@ -95,7 +95,7 @@ function mostrarBotoesConstruirCidadeJ1() {
     document.getElementById('botao_pedreira_pequena_jogador_1').style.display = "block";
     document.getElementById('botao_templo_pequeno_jogador_1').style.display = "block";
     document.getElementById('botao_templo_grande_jogador_1').style.display = "block";
-    if (casaDeCuraDisponivel == true) {
+    if (casaDaVidaDisponivel == true) {
         document.getElementById('botao_casa_vida_jogador_1').style.display = "block";
     }
 
@@ -112,7 +112,7 @@ function mostrarBotoesConstruirCidadeJ2() {
     document.getElementById('botao_pedreira_pequena_jogador_2').style.display = "block";
     document.getElementById('botao_templo_pequeno_jogador_2').style.display = "block";
     document.getElementById('botao_templo_grande_jogador_2').style.display = "block";
-    if (casaDeCuraDisponivel == true) {
+    if (casaDaVidaDisponivel == true) {
         document.getElementById('botao_casa_vida_jogador_2').style.display = "block";
     }
 
@@ -153,7 +153,7 @@ function mostrarBotoesAcaoAdversarioJ1() {
     document.getElementById('botao_treinar_soldado_jogador_2').style.display = "block";
     document.getElementById('botao_ordenar_sacerdote_jogador_2').style.display = "block";
     document.getElementById('botao_gerar_trabalhador_jogador_2').style.display = "block";
-    if (casaDeCuraDisponivel == true) {
+    if (casaDaVidaDisponivel == true) {
         document.getElementById('botao_formar_medico_jogador_2').style.display = "block";
     }
 }
@@ -164,7 +164,7 @@ function mostrarBotoesAcaoAdversarioJ2() {
     document.getElementById('botao_treinar_soldado_jogador_1').style.display = "block";
     document.getElementById('botao_ordenar_sacerdote_jogador_1').style.display = "block";
     document.getElementById('botao_gerar_trabalhador_jogador_1').style.display = "block";
-    if (casaDeCuraDisponivel == true) {
+    if (casaDaVidaDisponivel == true) {
         document.getElementById('botao_formar_medico_jogador_1').style.display = "block";
     }
 }
@@ -175,7 +175,7 @@ function esconderBotoesAcaoAdversarioJ1() {
     document.getElementById('botao_treinar_soldado_jogador_2').style.display = "none";
     document.getElementById('botao_ordenar_sacerdote_jogador_2').style.display = "none";
     document.getElementById('botao_gerar_trabalhador_jogador_2').style.display = "none";
-    if (casaDeCuraDisponivel == true) {
+    if (casaDaVidaDisponivel == true) {
         document.getElementById('botao_formar_medico_jogador_2').style.display = "none";
     }
     document.getElementById('botao_poco_grande_jogador_2').style.display = "none";
@@ -200,7 +200,7 @@ function esconderBotoesAcaoAdversarioJ2() {
     document.getElementById('botao_treinar_soldado_jogador_1').style.display = "none";
     document.getElementById('botao_ordenar_sacerdote_jogador_1').style.display = "none";
     document.getElementById('botao_gerar_trabalhador_jogador_1').style.display = "none";
-    if (casaDeCuraDisponivel == true) {
+    if (casaDaVidaDisponivel == true) {
         document.getElementById('botao_formar_medico_jogador_1').style.display = "none";
     }
     document.getElementById('botao_poco_grande_jogador_1').style.display = "none";
