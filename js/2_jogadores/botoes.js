@@ -285,26 +285,27 @@ else{
         cliqueTerrenoJ1Ativo = true;
         andamentoPiramideGrandeJ1 = true;
         alert("selecione o terreno");
-        acoesPropriasRodada++;
-        if (acoesPropriasRodada < 3) {
-            ocultarBotoesConstruirMonumentoJ1();
-            mostrarBotoesMenuPrincipalJ1();
-        }
-        else{
-            if (rodada1 == true) {
-                acoesPropriasRodada = 0;
-                alert("agora é a vez do jogador 2")
-                ocultarBotoesConstruirMonumentoJ1();
-                vezJogador2();
-            }
-            else{
-                acoesPropriasRodada = 0;
-                ocultarBotoesConstruirMonumentoJ1();
-                mostrarBotoesAcaoAdversarioJ1();
-                acoesDoAdversario = true;
-            }
+        ocultarBotoesConstruirMonumentoJ1();
+        
+        // if (acoesPropriasRodada < 3) {
+        //     ocultarBotoesConstruirMonumentoJ1();
+        //     mostrarBotoesMenuPrincipalJ1();
+        // }
+        // else{
+        //     if (rodada1 == true) {
+        //         acoesPropriasRodada = 0;
+        //         alert("agora é a vez do jogador 2")
+        //         ocultarBotoesConstruirMonumentoJ1();
+        //         vezJogador2();
+        //     }
+        //     else{
+        //         acoesPropriasRodada = 0;
+        //         ocultarBotoesConstruirMonumentoJ1();
+        //         mostrarBotoesAcaoAdversarioJ1();
+        //         acoesDoAdversario = true;
+        //     }
 
-        }
+        // }
     }
     else{
         alert("sem resursos para isso");

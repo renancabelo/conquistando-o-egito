@@ -67,8 +67,10 @@ function cliqueTerreno1J1(){
             if (andamentoPiramideGrandeJ1 == true) {
                 if (terreno1J1.construcoes < 10) {
                     if (podeConstruirPiramideGrande) {
-                        //d
-                        alert("construindo piramide grande!")
+                        document.getElementById('jog1_terreno_1').innerHTML = "fdf";
+                        andamentoPiramideGrandeJ1 = false;
+                        alert("piramide grande construída!")
+                        acoesPropriasRodada++;
                     }else{
                         alert("Não tem recursos para construir.")
                     }
