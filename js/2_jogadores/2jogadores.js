@@ -60,12 +60,14 @@ function vezJogador2() {
     document.getElementById('fundo_jogador_2').style.opacity = 1;
     document.getElementById('fundo_jogador_1').style.opacity = 0.5;
     document.getElementById('botao_coletar_jogador_2').style.display = "block";
+    // document.getElementById('div_h2_jogador2').style.backgroundColor = green;
 }
 
 function vezJogador1() {
     document.getElementById('fundo_jogador_2').style.opacity = 0.5;
     document.getElementById('fundo_jogador_1').style.opacity = 1;
     document.getElementById('botao_coletar_jogador_1').style.display = "block";
+    // document.getElementById('div_h2_jogador1').style.backgroundColor = green;
 }
 
 

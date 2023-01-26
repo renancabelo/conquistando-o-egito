@@ -267,21 +267,24 @@ function cliqueConstruirCidadeJ2() {
 
 function cliqueConstruirPiramideGrandeJ1() {
 if (acoesDoAdversario == true) {
-    if (podeConstruirPiramideGrande) {
+    if (podeConstruirPiramideGrandeJ1) {
         cliqueTerrenoJ1Ativo = true;
         andamentoPiramideGrandeJ1 = true;
         alert("selecione o terreno");
-        acoesDoAdversario = false;
-        esconderBotoesAcaoAdversarioJ2();
-        vezJogador1();
-        atualizaRodada();
+        ocultarBotoesConstruirMonumentoJ1();
+        document.getElementById('fundo_jogador_2').style.opacity = 0.5;
+        document.getElementById('fundo_jogador_1').style.opacity = 1;
+        // acoesDoAdversario = false;
+        // esconderBotoesAcaoAdversarioJ2();
+        // vezJogador1();
+        // atualizaRodada();
     }
     else{
         alert("sem resursos para isso");
     }
 }
 else{
-        if (podeConstruirPiramideGrande) {
+        if (podeConstruirPiramideGrandeJ1) {
         cliqueTerrenoJ1Ativo = true;
         andamentoPiramideGrandeJ1 = true;
         alert("selecione o terreno");

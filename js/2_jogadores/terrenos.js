@@ -55,7 +55,7 @@ function jogador(moedas, pedras, madeiras, aguas, comidas, pontosFelicidade, pon
     this.pontosVitoria = pontosVitoria;
 }
 
-function podeConstruirPiramideGrande (){
+function podeConstruirPiramideGrandeJ1 (){
     return  jogador1.moedas >= custoPiramideGrande.moedas &&
             jogador1.pedras >= custoPiramideGrande.pedras &&
             jogador1.madeiras >= custoPiramideGrande.madeiras
@@ -66,11 +66,41 @@ function cliqueTerreno1J1(){
         if (terreno1J1.ativo == true) {
             if (andamentoPiramideGrandeJ1 == true) {
                 if (terreno1J1.construcoes < 10) {
-                    if (podeConstruirPiramideGrande) {
-                        document.getElementById('jog1_terreno_1').innerHTML = "fdf";
-                        andamentoPiramideGrandeJ1 = false;
-                        alert("piramide grande construída!")
-                        acoesPropriasRodada++;
+                    if (podeConstruirPiramideGrandeJ1) {
+                        if (acoesDoAdversario == false){
+                            document.getElementById('jog1_terreno_1').innerHTML = "fdf";
+                            andamentoPiramideGrandeJ1 = false;
+                            alert("piramide grande construída!")
+                            acoesPropriasRodada++;
+                            if (acoesPropriasRodada < 3) {
+                                ocultarBotoesConstruirMonumentoJ1();
+                                mostrarBotoesMenuPrincipalJ1();
+                            }
+                            else{
+                                if (rodada1 == true) {
+                                    acoesPropriasRodada = 0;
+                                    alert("agora é a vez do jogador 2")
+                                    ocultarBotoesConstruirMonumentoJ1();
+                                    vezJogador2();
+                                }
+                                else{
+                                    acoesPropriasRodada = 0;
+                                    ocultarBotoesConstruirMonumentoJ1();
+                                    mostrarBotoesAcaoAdversarioJ1();
+                                    acoesDoAdversario = true;
+                                }
+                    
+                            }
+                        }else {
+                            document.getElementById('jog1_terreno_1').innerHTML = "fdf";
+                            andamentoPiramideGrandeJ1 = false;
+                            alert("piramide grande construída!")
+                            esconderBotoesAcaoAdversarioJ2();
+                            vezJogador1();
+                            atualizaRodada();
+                            acoesDoAdversario = false;
+                        }
+
                     }else{
                         alert("Não tem recursos para construir.")
                     }

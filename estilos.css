@@ -2,6 +2,10 @@ fieldset {
     width: 260px;
 }
 
+#game_dois_jogadores{
+    display: none;
+}
+
 #fundo_jogador_1{
     background-image: url(imagens/fundo.jpg);
     width: 800px;
