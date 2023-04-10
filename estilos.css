@@ -107,3 +107,38 @@ tr{
     display: none;
     float: right;
 }
+
+#monumento-txt{
+    color: rgb(48, 9, 100);
+
+}
+
+#bloco-monumentos{
+    padding-top: 0;
+    padding-left: 0;
+    text-align: left;
+    margin-top: 0;
+    margin-right: 12px;
+    position: relative;
+    float: left;
+    background-color: rgba(183, 187, 197, 0.3)
+}
+
+#bloco-monumentos p{
+    margin: 0;
+    font-weight: bold;
+}
+
+#bloco-cidades{
+    padding-top: 0;
+    padding-left: 0;
+    text-align: left;
+    margin-top: 0;
+    position: relative;
+    background-color: rgba(183, 187, 197, 0.3)
+}
+
+#bloco-cidades p{
+    margin: 0;
+    font-weight: bold;
+}
